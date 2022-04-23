@@ -1,0 +1,18 @@
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(org.SimpleSearch.MainSpec, org.scalatest.tools.Framework$$anon$1@2e290d76, false, [SuiteSelector])[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mMainSpec:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mSimple Search Program[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should gracefully reject a missing argument[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[33m- should gracefully reject an invalid file path !!! IGNORED !!![0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should read a valid directory path and return a valid path[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should gracefully reject a file path argument[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should index directory files[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should compute the inputs received[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should get occurrence num for result files[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should rank search results correctly and return top 10 results[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mRun completed in 227 milliseconds.[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mTotal number of tests run: 7[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mSuites: completed 1, aborted 0[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mTests: succeeded 7, failed 0, canceled 0, ignored 1, pending 0[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mAll tests passed.[0m[0m
+[0m[[0m[0mdebug[0m] [0m[0mPassed tests:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	org.SimpleSearch.MainSpec[0m

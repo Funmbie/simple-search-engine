@@ -42,12 +42,11 @@ class MainSpec extends AnyFlatSpec {
   it should "index directory files" in {
     val dir   = new java.io.File("./data")
     val index = TestProgram.Index(Map(
-      "hello" -> List("index_text.txt"),
-      "day" -> List("index_text.txt"),
-      "rockerchallenge" -> List("index_text.txt"),
-      "world" -> List("index_text.txt"),
-      "of" -> List("index_text.txt"),
-      "one" -> List("index_text.txt")
+      'h' -> Map("hello" -> List("index_text.txt")),
+      'd' -> Map("day" -> List("index_text.txt")),
+      'r' -> Map("rockerchallenge" -> List("index_text.txt")),
+      'w' -> Map("world" -> List("index_text.txt")),
+      'o' -> Map("of" -> List("index_text.txt"), "one" -> List("index_text.txt"))
     ))
 
     assert(TestProgram.index(dir) == index)
@@ -56,8 +55,8 @@ class MainSpec extends AnyFlatSpec {
   it should "compute the inputs received" in {
     val testIndex = TestProgram.Index(
       Map(
-        "hello" -> List("index.txt", "sole.txt"),
-        "world" -> List("sole.txt")
+        'h' -> Map("hello" -> List("index.txt", "sole.txt")),
+        'w' -> Map("world" -> List("sole.txt"))
       )
     )
     TestProgram.compute(testIndex, "hello")

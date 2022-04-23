@@ -1,0 +1,13 @@
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(runMain org.SimpleSearch.Main data, Some(2546cd14-b15c-4d15-b2fc-5caf39f3f7b4), Some(CommandSource(console0)))[0m
+[0m[[0m[0mdebug[0m] [0m[0mEvaluating tasks: Compile / runMain[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 1 Scala source to D:\Work Files\simple-search-engine\target\scala-2.13\classes ...[0m
+[0m[[0m[31merror[0m] [0m[0mD:\Work Files\simple-search-engine\src\main\scala\org\SimpleSearch\Main.scala:66:23: type mismatch;[0m
+[0m[[0m[31merror[0m] [0m[0m found   : String => Unit[0m
+[0m[[0m[31merror[0m] [0m[0m required: ((Char, Map[String,List[String]])) => ?[0m
+[0m[[0m[31merror[0m] [0m[0m    fileIndex foreach println[0m
+[0m[[0m[31merror[0m] [0m[0m                      ^[0m
+[0m[[0m[31merror[0m] [0m[0mone error found[0m
+[0m[[0m[31merror[0m] [0m[0m(Compile / [31mcompileIncremental[0m) Compilation failed[0m
+[0m[[0m[31merror[0m] [0m[0mTotal time: 3 s, completed 23-Apr-2022 19:29:24[0m
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(shell, None, None)[0m

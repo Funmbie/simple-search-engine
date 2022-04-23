@@ -1,0 +1,41 @@
+[0m[[0m[31merror[0m] [0m[0mD:\Work Files\simple-search-engine\src\test\scala\org\SimpleSearch\MainSpec.scala:45:15: type mismatch;[0m
+[0m[[0m[31merror[0m] [0m[0m found   : (String, List[String])[0m
+[0m[[0m[31merror[0m] [0m[0m required: (Char, Map[String,List[String]])[0m
+[0m[[0m[31merror[0m] [0m[0m      "hello" -> List("index_text.txt"),[0m
+[0m[[0m[31merror[0m] [0m[0m              ^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\Work Files\simple-search-engine\src\test\scala\org\SimpleSearch\MainSpec.scala:46:13: type mismatch;[0m
+[0m[[0m[31merror[0m] [0m[0m found   : (String, List[String])[0m
+[0m[[0m[31merror[0m] [0m[0m required: (Char, Map[String,List[String]])[0m
+[0m[[0m[31merror[0m] [0m[0m      "day" -> List("index_text.txt"),[0m
+[0m[[0m[31merror[0m] [0m[0m            ^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\Work Files\simple-search-engine\src\test\scala\org\SimpleSearch\MainSpec.scala:47:25: type mismatch;[0m
+[0m[[0m[31merror[0m] [0m[0m found   : (String, List[String])[0m
+[0m[[0m[31merror[0m] [0m[0m required: (Char, Map[String,List[String]])[0m
+[0m[[0m[31merror[0m] [0m[0m      "rockerchallenge" -> List("index_text.txt"),[0m
+[0m[[0m[31merror[0m] [0m[0m                        ^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\Work Files\simple-search-engine\src\test\scala\org\SimpleSearch\MainSpec.scala:48:15: type mismatch;[0m
+[0m[[0m[31merror[0m] [0m[0m found   : (String, List[String])[0m
+[0m[[0m[31merror[0m] [0m[0m required: (Char, Map[String,List[String]])[0m
+[0m[[0m[31merror[0m] [0m[0m      "world" -> List("index_text.txt"),[0m
+[0m[[0m[31merror[0m] [0m[0m              ^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\Work Files\simple-search-engine\src\test\scala\org\SimpleSearch\MainSpec.scala:49:12: type mismatch;[0m
+[0m[[0m[31merror[0m] [0m[0m found   : (String, List[String])[0m
+[0m[[0m[31merror[0m] [0m[0m required: (Char, Map[String,List[String]])[0m
+[0m[[0m[31merror[0m] [0m[0m      "of" -> List("index_text.txt"),[0m
+[0m[[0m[31merror[0m] [0m[0m           ^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\Work Files\simple-search-engine\src\test\scala\org\SimpleSearch\MainSpec.scala:50:13: type mismatch;[0m
+[0m[[0m[31merror[0m] [0m[0m found   : (String, List[String])[0m
+[0m[[0m[31merror[0m] [0m[0m required: (Char, Map[String,List[String]])[0m
+[0m[[0m[31merror[0m] [0m[0m      "one" -> List("index_text.txt")[0m
+[0m[[0m[31merror[0m] [0m[0m            ^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\Work Files\simple-search-engine\src\test\scala\org\SimpleSearch\MainSpec.scala:59:17: type mismatch;[0m
+[0m[[0m[31merror[0m] [0m[0m found   : (String, List[String])[0m
+[0m[[0m[31merror[0m] [0m[0m required: (Char, Map[String,List[String]])[0m
+[0m[[0m[31merror[0m] [0m[0m        "hello" -> List("index.txt", "sole.txt"),[0m
+[0m[[0m[31merror[0m] [0m[0m                ^[0m
+[0m[[0m[31merror[0m] [0m[0mD:\Work Files\simple-search-engine\src\test\scala\org\SimpleSearch\MainSpec.scala:60:17: type mismatch;[0m
+[0m[[0m[31merror[0m] [0m[0m found   : (String, List[String])[0m
+[0m[[0m[31merror[0m] [0m[0m required: (Char, Map[String,List[String]])[0m
+[0m[[0m[31merror[0m] [0m[0m        "world" -> List("sole.txt")[0m
+[0m[[0m[31merror[0m] [0m[0m                ^[0m
+[0m[[0m[31merror[0m] [0m[0m8 errors found[0m

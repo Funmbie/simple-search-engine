@@ -22,8 +22,19 @@ trait OutputT {
 trait SimpleSearchT extends OutputT {
   import scala.io.StdIn.readLine
 
-  case class Index(files: Map[String, List[String]])
   case class Rank(file: String, rank: Double)
+  case class Index(files: Map[Char, Map[String, List[String]]]) {
+    def updatePartition(pKey: Char, key:String, fileName: String)
+    : Index = {
+      files.get(pKey).fold(
+        Index(files.updated(pKey, Map(key -> List(fileName))))
+      )(p => p.get(key).fold(
+        Index(files.updated(pKey, p.updated(key, List(fileName))))
+      )(paths =>
+        Index(files.updated(pKey, p.updated(key, fileName :: paths))))
+      )
+    }
+  }
 
   sealed trait ReadFileError
 
@@ -45,44 +56,44 @@ trait SimpleSearchT extends OutputT {
   }
 
   def index(file: File): Index = {
-    val fileIndex = file.listFiles(_.isFile)
-      .foldLeft(Map.empty[String, List[String]]) { (map, f) =>
+    file.listFiles(_.isFile)
+      .foldLeft(Index(Map.empty)) { (index, f) =>
         println(f.getAbsolutePath)
         val source = scala.io.Source.fromFile(f)
         val lines  = try source.getLines mkString "\n" finally source.close()
 
-        val result = for {
-          res <- lines.split("\\s") map { word =>
-            map get word match {
-              case None        => (word.toLowerCase, List(f.getName))
-              case Some(paths) => (word.toLowerCase, f.getName :: paths)
-            }
-          }
-        } yield res
-
-        result.foldLeft(map)(_ + _)
+        lines.split("\\s").foldLeft(index) { (i, word) =>
+          val key          = word.toLowerCase
+          val partitionKey = key.head
+          i.updatePartition(partitionKey, key, f.getName)
+        }
     }
-    Index(fileIndex)
   }
 
-  def iterate(indexedFiles: Index): Unit = {
+  def iterate(index: Index): Unit = {
     print(s"search> ")
     val searchString = readLine()
 
     if(searchString == ":quit") System exit 0
 
-    compute(indexedFiles, searchString)
-    iterate(indexedFiles)
+    compute(index, searchString)
+    iterate(index)
   }
 
-  def compute(indexedFiles: Index, searchString: String): Unit = {
-    val query        = searchString.split("\\s")
-    val unrankedRes  = query.foldLeft(List.empty[String])(
-      (files, word) =>
-        indexedFiles.files.get(word.toLowerCase)
-          .fold(files)
-          (x => x ::: files)
+  def compute(index: Index, searchString: String): Unit = {
+    val query       = searchString.split("\\s")
+    val unrankedRes = query.foldLeft(List.empty[String])(
+      (files, word) => {
+        val key  = word.toLowerCase
+        val pKey = key.head
+        index.files.get(pKey)
+          .fold(files)(partition =>
+            partition.get(key)
+              .fold(files)(r => r ::: files)
+          )
+      }
     )
+
     val rankedRes = rank(getOccurrenceNum(unrankedRes), query.length)
     if (rankedRes.isEmpty)
       println("No results: ")
